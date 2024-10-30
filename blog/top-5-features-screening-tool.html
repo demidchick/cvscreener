@@ -20,15 +20,31 @@
     <meta name="twitter:title" content="Top 5 features to look for in a resume screening tool - CVScreener: Instantly screen hundreds of resumes without human effort">
     <meta name="twitter:description" content="Discover top candidates among your applicants in seconds instead of hours. Find the right candidates based on their experience, location, or custom criteria, such as skills or competencies, excluding everything that doesn&#39;t match the job needs.">
     
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="assets/js/top-js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-18NH8L07RK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){window.dataLayer.push(arguments);}
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
+    
       gtag('config', 'G-18NH8L07RK');
+    
+      // Track "Get Started" button clicks
+      document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('click', function(e) {
+          const clickedText = e.target.textContent.trim();
+          if (clickedText === 'Get Started →') {
+            gtag('event', 'get_started_click', {
+              event_category: 'engagement',
+              event_label: 'get_started_button',
+              button_location: e.target.closest('section')?.getAttribute('name') || 'unknown'
+            });
+            console.log('Get Started button clicked - Event sent to GA4'); // For debugging
+          }
+        });
+      });
     </script>
+
     
     <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin=""><link rel="canonical" href="https://www.cvscreener.co/blog/top-5-features-to-look-for-in-a-resume-screening-tool"><meta property="og:url" content="https://www.cvscreener.co/blog/top-5-features-to-look-for-in-a-resume-screening-tool">
     <!--<link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2OxLoR4JCz4axALw2gIxtY/chunk-A4L7N2BU.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2OxLoR4JCz4axALw2gIxtY/chunk-ELYU6EKT.mjs">-->
