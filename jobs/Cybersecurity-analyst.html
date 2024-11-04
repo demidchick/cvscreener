@@ -32,7 +32,7 @@
       <div class="cta-banner">
         <h2>Save time on pre-screening candidates</h2>
         <p>CVScreener will scan hundreds of resumes for you and pick the top candidates for the criteria that matter to you</p>
-        <a href="https://app.cvscreener.co" class="button">Get started</a>
+        <button class="get-started-btn" onclick="location.href='https://app.cvscreener.co';">Get Started →</button>
       </div>
 
       <section>
@@ -141,13 +141,39 @@
         <div class="logo">C</div>
       </div>
       <div class="footer-links">
+  <a href="../jobs.html">Interview Questions: A Recruiter's Guide</a>
         <a href="https://hoponboard.cc/">HopOnBoard – Streamline onboarding & offboarding</a>
-        <a href="blog/top-5-features-screening-tool.html">Top 5 features to look for in a resume screening tool</a>
-        <a href="blog/automated-screening.html">What is Automated Screening in Recruitment?</a>
-        <a href="blog/transforming-recruitment.html">Transforming Recruitment: The Power of Automated Resume Screening</a>
+        <a href="../blog/top-5-features-screening-tool.html">Top 5 features to look for in a resume screening tool</a>
+        <a href="../blog/automated-screening.html">What is Automated Screening in Recruitment?</a>
+        <a href="../blog/transforming-recruitment.html">Transforming Recruitment: The Power of Automated Resume Screening</a>
         <a href="mailto:contact.cvscreener@gmail.com">Contact Us</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="../privacy-policy.html">Privacy Policy</a>
       </div>
     </footer>
   </body>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18NH8L07RK"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-18NH8L07RK');
+
+// Track "Get Started" button clicks
+document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('click', function(e) {
+const clickedText = e.target.textContent.trim();
+if (clickedText === 'Get Started →') {
+gtag('event', 'get_started_click', {
+event_category: 'engagement',
+event_label: 'get_started_button',
+button_location: e.target.closest('section')?.getAttribute('name') || 'unknown'
+});
+console.log('Get Started button clicked - Event sent to GA4'); // For debugging
+}
+});
+});
+</script>
 </html>
