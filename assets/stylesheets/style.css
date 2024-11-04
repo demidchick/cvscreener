@@ -1,0 +1,280 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+button:hover {
+    color: #ccc;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+.header {
+    margin-top: 4em;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    letter-spacing: -1px;
+}
+
+.header p {
+    font-size: 1em;
+}
+
+/* Call to action banner */
+.cta-banner {
+    background-color: #F6F4F3;
+    border: 1px solid #e0e6ed;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.cta-banner h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.cta-banner p {
+    font-size: 0.9em;
+}
+
+/* Section styling */
+section {
+    margin: 30px 0;
+}
+
+section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* List styling */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e6ed;
+    margin-top: 40px;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .cta-banner h2 {
+        font-size: 1.3em;
+    }
+
+    .cta-banner p {
+        font-size: 0.85em;
+    }
+
+    section h2 {
+        font-size: 1.3em;
+    }
+
+    section p, ul li {
+        font-size: 0.85em;
+    }
+
+    .footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.6em;
+    }
+
+    .header p {
+        font-size: 0.9em;
+    }
+
+    .cta-banner {
+        padding: 15px;
+    }
+
+    .cta-banner h2 {
+        font-size: 1.2em;
+    }
+
+    .cta-banner button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    section p, ul li {
+        font-size: 0.8em;
+    }
+
+    .footer {
+        padding: 15px;
+        font-size: 0.75em;
+    }
+}
+
+.top-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 0.8px solid #ddd;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    button {
+        margin-top: 5px;
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    background-color: #000000;
+    color: #fff;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.contact-link {
+    color: #0099ff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff;
+    border-top: 0.8px solid #ddd;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    letter-spacing: 0.5px;
+}
+
+a {
+    color: #0099ff;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
